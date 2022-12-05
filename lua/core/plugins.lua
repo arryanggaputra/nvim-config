@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'williamboman/mason.nvim'
   use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'

@@ -20,6 +20,7 @@ require("core.toggleterm")
 require("core.indentline")
 require('lualine').setup()
 require('nvim-web-devicons').setup()
+require("mason").setup()
 
 
 
