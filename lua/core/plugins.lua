@@ -20,7 +20,8 @@ return require("packer").startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("nvim-lua/plenary.nvim")
-
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
 	
 	use({
 		"nvim-treesitter/nvim-treesitter",
