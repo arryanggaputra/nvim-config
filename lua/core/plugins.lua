@@ -22,12 +22,13 @@ return require("packer").startup(function(use)
 	use("nvim-lua/plenary.nvim")
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
+	use 'akinsho/nvim-bufferline.lua'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
 	
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	})
-	use("akinsho/toggleterm.nvim")
+  use("akinsho/toggleterm.nvim")
 	-- My plugins here
 	-- use 'foo1/bar1.nvim'
 	-- use 'foo2/bar2.nvim'

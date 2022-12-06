@@ -28,3 +28,9 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Toggle nvim tree --
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- Select all
+vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
+
+-- New tab
+vim.keymap.set('n', 'te', ':tabedit')
