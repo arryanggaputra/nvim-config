@@ -13,7 +13,6 @@ vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
-vim.opt.shell = "fish"
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 vim.opt.inccommand = "split"
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
@@ -41,4 +40,10 @@ require("core.bufferline")
 require("lualine").setup()
 require("nvim-web-devicons").setup()
 require("core.telescope")
+require("core.cmp")
+require("core.mason")
+require("core.lspconfig")
+require("core.null-ls")
+require("core.lspkind")
+require("core.lspsaga")
 vim.cmd.colorscheme("catppuccin")

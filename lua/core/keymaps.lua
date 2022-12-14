@@ -34,3 +34,5 @@ vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- New tab
 vim.keymap.set('n', 'te', ':tabedit')
+vim.keymap.set('n', 'gf', '<C-W>gf')
+vim.keymap.set('v', 'gf', '<C-W>gf')
