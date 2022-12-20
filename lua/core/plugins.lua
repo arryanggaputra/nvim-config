@@ -34,10 +34,13 @@ return require("packer").startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'L3MON4D3/LuaSnip'
+  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-autopairs'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+  use("Pocco81/auto-save.nvim")
 
   use("akinsho/toggleterm.nvim")
   -- My plugins here

@@ -12,7 +12,7 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 
 
 require("nvim-tree").setup({
- view = {
+  view = {
     width = 30,
     side = "left",
     mappings = {

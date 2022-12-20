@@ -1,21 +1,28 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-  return
-end
-
-configs.setup({
-  ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust", "java",
+require("nvim-treesitter.configs").setup {
+  ensure_installed = { "html", "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust",
+    "java",
     "yaml", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
-  ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
   highlight = {
     enable = true, -- false will disable the whole extension
-    disable = { "css" }, -- list of language that will be disabled
+  },
+  autotag = {
+    enable = true,
   },
   context_commentstring = {
     enable = true
-  },
-  autopairs = {
-    enable = true,
-  },
-  indent = { enable = true, disable = { "python", "css" } },
-})
+  }
+
+}
+
+
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
+    underline = true,
+    virtual_text = {
+      spacing = 5,
+      severity_limit = 'Warning',
+    },
+    update_in_insert = true,
+  }
+)
