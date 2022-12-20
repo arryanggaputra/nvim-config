@@ -21,6 +21,8 @@ return require("packer").startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'akinsho/nvim-bufferline.lua'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'fedepujol/move.nvim'
   use 'onsails/lspkind-nvim'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
