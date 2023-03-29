@@ -8,6 +8,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.nvim_tree_special_files = { ['README.md'] = 1, ['Makefile'] = 1, ['MAKEFILE'] = 1, ['.env'] = 1 }
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
